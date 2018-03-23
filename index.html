@@ -2,9 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>视频Vip解析</title>
+    <title>视频Vip解析</title><style>
+
+    .iframe{
+        width: 100%;
+        height: 900px;
+    }
+</style>
 </head>
 <body>
+<div style="text-align: center;">
+    <h3><i class="layui-icon" style="line-height: 30px; font-size: 30px; color: #393D49;">小马vip</i></h3>
 
+    <iframe id="myIframe" src="http://www.qmaile.com/" class="iframe"></iframe>
+</div>
 </body>
+
+<script>
+
+    document.getElementById("myIframe").onload = function(){
+        alert(document.getElementById("myIframe").contentWindow.document.body.innerHTML);
+    };
+
+</script>
 </html>
